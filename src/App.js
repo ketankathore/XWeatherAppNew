@@ -6,7 +6,6 @@ function App() {
   const [cityInput, setCityInput] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
 
   const API_KEY = process.env.REACT_APP_API_KEY || 'YOUR_API_KEY'; // Replace with your API key from weatherapi.com
 
@@ -17,7 +16,6 @@ function App() {
     }
 
     setLoading(true);
-    setError(false);
     setWeatherData(null);
 
     try {
@@ -40,7 +38,6 @@ function App() {
       });
       setCityInput('');
     } catch (err) {
-      setError(true);
       alert('Failed to fetch weather data');
     } finally {
       setLoading(false);
