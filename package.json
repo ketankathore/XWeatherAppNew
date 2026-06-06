@@ -14,13 +14,16 @@
   },
   "devDependencies": {
     "cross-env": "^10.1.0",
+    "cypress": "^15.16.0",
     "rimraf": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "cross-env NODE_OPTIONS=--no-deprecation react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "eslintConfig": {
     "extends": [
